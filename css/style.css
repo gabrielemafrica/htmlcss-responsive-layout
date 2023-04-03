@@ -67,17 +67,17 @@ main{
 }
 
     /* versione tablet */
-@media screen and (min-width:480px) {
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .scheda{
-        flex-basis: calc(100%/3 - 10px);
-    }
+    @media screen and (min-width:480px) {
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .scheda{
+            flex-basis: calc(100%/3 - 10px);
+        }
 
-}
+    }
 
 
 /* developer */
@@ -96,15 +96,52 @@ main{
 
     /* versione tablet */
 
-@media screen and (min-width:480px) {
-    #developer-section .scheda:first-child{
-        flex-basis: calc(100%/3*2 - 5px);
+    @media screen and (min-width:480px) {
+        #developer-section .scheda:first-child{
+            flex-basis: calc(100%/3*2 - 5px);
+        }
+
     }
 
+
+/* planning */
+
+#planning-section{
+    background-color: rgb(153, 146, 224);
+    padding: 40px 0;
+}
+
+#planning-section .sx-planning{
+    margin-bottom: 20px;
+}
+
+#planning-section .dx-planning{
+    border-radius: 20px;
+    background-color: white;
 }
 
 
+    /* versione desktop */
 
+    @media screen and (min-width:769px) {
+
+        #planning-section .container{
+            width: 70%;
+            max-width: calc(950px);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        #planning-section .sx-planning, #planning-section .dx-planning{
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 0;
+
+        }
+        
+
+
+    }
 
 
 /* footer */
@@ -145,8 +182,15 @@ footer{
 
 }
 
-.coll.app{
+.sx-planning, .dx-planning{
+    min-height: 50px;
+    min-width: 100px;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
 
+.sx-planning{
+    min-height: 80px;
 }
 
 
