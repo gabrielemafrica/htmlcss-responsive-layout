@@ -60,14 +60,46 @@ header .container{
 
 main{
     padding-top: 100px;
+}
+.scheda{
+    border-radius: 10px; 
+    margin-bottom: 20px;
+}
+
+    /* versione tablet */
+@media screen and (min-width:480px) {
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .scheda{
+        flex-basis: calc(100%/3 - 10px);
+    }
 
 }
+
+
+/* developer */
+
+#developer-section{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#developer-section .scheda{
+    background-color: rgb(175, 222, 253);
+}
+
+
 
 
     /* versione tablet */
 
 @media screen and (min-width:480px) {
-
+    #developer-section .scheda:first-child{
+        flex-basis: calc(100%/3*2 - 5px);
+    }
 
 }
 
@@ -107,9 +139,10 @@ footer{
     border: 1px solid black;
 }
 
-.col{
+.scheda{
     min-height: 100px;
-    background-color: green;
+    border: 1px solid black;
+
 }
 
 .coll.app{
