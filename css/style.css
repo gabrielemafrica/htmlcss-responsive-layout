@@ -1,0 +1,120 @@
+/* regole generali */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* header */
+
+header{
+    background-color: blue;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 90;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-desktop{
+    display: none;
+}
+
+
+    /* versione desktop */
+
+    @media screen and (min-width:769px) {
+
+        .container{
+            max-width: 1024px;
+            width: 80%;
+        }
+        
+        #menu-mobile{
+            display: none;
+        }
+
+        #menu-desktop{
+            display: block;
+        }
+        
+    }
+
+/* main */
+
+main{
+    padding-top: 100px;
+
+}
+
+
+    /* versione tablet */
+
+@media screen and (min-width:480px) {
+
+
+}
+
+
+
+
+
+/* footer */
+footer{
+    background-color: black;
+
+}
+
+
+/* debug */
+
+section{
+    min-height: 150px;
+    background-color: brown;
+    margin: 5px 0;
+}
+
+footer{
+    min-height: 150px;
+}
+
+.container{
+    min-height: 50px;
+    background-color: aqua;
+}
+
+
+#logo, header nav{
+    min-height: 50px;
+    min-width: 100px;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.col{
+    min-height: 100px;
+    background-color: green;
+}
+
+.coll.app{
+
+}
+
+
+
