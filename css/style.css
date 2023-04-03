@@ -179,6 +179,27 @@ main{
         }
     }  
 
+/* benefits */
+
+
+#benefits{
+    background-color: rgb(153, 146, 224);
+    padding: 40px 0;
+}
+
+#benefits .scheda{
+    background-color: white;
+}
+
+    /* versione tablet */
+
+    @media screen and (min-width:480px) and (max-width:768px){
+
+        .scheda{
+            flex-basis: calc(100%/2 - 10px);
+        }
+
+    }
 
 
 /* footer */
