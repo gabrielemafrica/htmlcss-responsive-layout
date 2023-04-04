@@ -519,7 +519,10 @@ main{
     border-radius: 50px;
     margin-bottom: 20px;
     text-align: center;
+    cursor: pointer;
 }
+
+
 
 div.foto.circle{
     height: 200px;
@@ -537,6 +540,21 @@ div.foto.circle img{
     object-fit: cover;
     border-radius: 50%;
 }
+/* animation */
+
+.item:hover div.foto.circle img{
+    filter: grayscale(1);
+   
+}
+.item:hover .description p, .item:hover .description h5{
+    color: pink;
+   
+}
+.item:active .description p, .item:active .description h5, .item:active div.foto.circle img{
+    color: white;
+    filter: none;
+}
+
 
 .item .description p{
     font-size: 18px;
