@@ -21,6 +21,7 @@ a{
 
 .container{
     width: 90%;
+    max-width: 480px;
     margin: 0 auto;
 }
 
@@ -91,9 +92,17 @@ header .container{
 }
 
 
+    /* versione tablet */
+
+    @media screen and (min-width:768px) {
+
+        .container{
+            max-width: 768px;
+        }
+    }
     /* versione desktop */
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:1024px) {
 
         .container{
             max-width: 1024px;
@@ -151,7 +160,7 @@ main{
 }
 
     /* versione tablet */
-    @media screen and (min-width:600px) {
+    @media screen and (min-width:768px) {
         .row{
     
             display: flex;
@@ -225,7 +234,7 @@ main{
 
     /* versione tablet */
 
-    @media screen and (min-width:600px) {
+    @media screen and (min-width:768px) {
         #developer-section .col.big{
             flex-basis: calc(100%/3*2 - 5px);
         }
@@ -249,7 +258,7 @@ main{
     }
     /* versione desktop */
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:1024px) {
 
         #developer-section .scheda div img{
         
@@ -346,7 +355,7 @@ main{
 
     /* versione desktop */
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:1024px) {
 
         #planning-section .container{
             width: 70%;
@@ -376,26 +385,117 @@ main{
     margin: 40px 0;
 }
 
+#testimonial-section .container{
+    width: 80%;
+}
+
 
 .testimonial-text{
     margin-bottom: 30px;
-    color: white;
+    text-align: center;
 }
+.testimonial-text h5{
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.testimonial-text h4{
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: rgb(153, 146, 224)
+}
+
+.testimonial-text p{
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 180%;
+    
+}
+
+
 
 #testimonial-section .item{
     background-color: rgb(153, 146, 224);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 50px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-#testimonial-section .foto{
-    margin-bottom: 10px;
+.item .foto{
+    height: 200px;
+    width: 200px;
+    margin: 10px auto 20px auto;
+
 }
+.item .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item .description p{
+    font-size: 18px;
+    line-height: 180%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+.item .description p::before{
+    content: "\201C";
+    font-size: 80px;
+    line-height: 0;
+    vertical-align: bottom;
+}
+
+.item .description p::after{
+    content: "\201D";
+    font-size: 80px;
+    line-height: 0;
+    vertical-align: bottom;
+}
+
+
+.item .description h5{
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+    /* versione tablet */
+
+    @media screen and (min-width:768px) {
+        #testimonial-section .container{
+            width: 90%;
+        }
+
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            
+        }
+        .item .foto{
+            flex-basis: 200px;
+            height: 200px;
+        }
+
+        .item .description{
+            flex-basis: 70%;
+            text-align: left;
+        }
+
+    } 
+
+
+
+
+
 
     /* versione desktop */
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:1024px) {
 
         #testimonial-section .item{
             display: flex;
@@ -422,7 +522,7 @@ main{
 
     /* versione tablet */
 
-    @media screen and (min-width:480px) and (max-width:768px){
+    @media screen and (min-width:768px) and (max-width:1024px){
 
         .scheda{
             flex-basis: calc(100%/2 - 10px);
@@ -438,7 +538,7 @@ main{
 }
     /* versione tablet */
 
-    @media screen and (min-width:480px) {
+    @media screen and (min-width:768px) {
         #aboutus .container{
             display: flex;
         }
@@ -455,7 +555,7 @@ main{
     }
 
     /* versione desktop */
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:1024px) {
         #aboutus .container{
             padding: 10px;
         }
