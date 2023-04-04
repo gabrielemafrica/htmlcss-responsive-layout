@@ -52,7 +52,9 @@ button.blue:hover{
     background-color: rgb(100, 134, 248);
 }
 
-
+.white{
+    color: white;
+}
 
 /* header */
 
@@ -220,6 +222,7 @@ main{
 
 
 
+
     /* versione tablet */
 
     @media screen and (min-width:600px) {
@@ -269,17 +272,76 @@ main{
 
 #planning-section{
     background-color: rgb(153, 146, 224);
-    padding: 40px 0;
+    padding: 80px 40px;
 }
 
 #planning-section .sx-planning{
     margin-bottom: 20px;
 }
 
-#planning-section .dx-planning{
-    border-radius: 20px;
-    background-color: white;
+#planning-section .sx-planning .img-planning{
+    margin-bottom: 60px;
 }
+
+.img-planning img{
+    max-width: 100%;
+}
+
+.sx-planning .img-planning{
+    margin-bottom: 60px;
+}
+
+.sx-planning h3{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.sx-planning p{
+    line-height: 180%;
+    margin-bottom: 40px;
+}
+
+
+#planning-section .dx-planning{
+    border-radius: 40px;
+    background-color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+.dx-planning .img-planning{
+    margin-bottom: 20px;
+}
+.dx-planning h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.dx-planning p{
+    font-style: italic;
+    line-height: 180%;
+    margin-bottom: 20px;
+}
+
+.dx-planning .circle{
+    background-color: rgb(153, 146, 224);
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.dx-planning .circle:hover{
+    background-color: rgb(100, 134, 248);
+    color: white;
+}
+
+.dx-planning i{
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+
 
 
     /* versione desktop */
@@ -295,9 +357,15 @@ main{
         }
 
         #planning-section .sx-planning, #planning-section .dx-planning{
-            flex-basis: calc(50% - 20px);
+            flex-basis: calc(50% - 30px);
             margin-bottom: 0;
+        }
 
+        .sx-planning p{
+            margin-bottom: 0px;
+        }
+        .dx-planning img{
+            max-width: 60%;
         }
     }
 
