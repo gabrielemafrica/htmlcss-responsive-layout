@@ -32,6 +32,11 @@ h4{
     font-size: 25px;
 }
 
+h5{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
 .container{
     width: 90%;
     max-width: 480px;
@@ -411,8 +416,6 @@ main{
 }
 .testimonial-text h5{
     margin-bottom: 30px;
-    font-size: 18px;
-    font-weight: lighter;
 }
 
 .testimonial-text h4{
@@ -661,6 +664,77 @@ div.foto.circle img{
         }
 
     }  
+
+
+
+/* get started */
+
+#getstarted{
+    background-color: rgb(153, 146, 224);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#getstarted .container{
+    width: 80%;
+}
+
+#getstarted h5{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
+}
+
+#getstarted h4{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+#getstarted h2{
+    font-size: 65px;
+    margin-bottom: 30px;
+    color: rgb(255, 191, 107);
+}
+
+#getstarted p{
+    line-height: 180%;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+#getstarted button{
+    padding: 20px 80px;
+    border-radius: 80px;
+    margin-bottom: 40px;
+}
+
+
+#getstarted button a{
+    color: rgb(153, 146, 224);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#getstarted .copyright{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#getstarted .copyright a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+#getstarted .copyright a:hover{
+    color: rgba(255, 255, 255);
+}
+
+
+    /* desktop */
+    @media screen and (min-width:768px) {
+
+        #getstarted .container{
+            max-width: 460px;
+        }
+    }
 
 
 /* footer */
