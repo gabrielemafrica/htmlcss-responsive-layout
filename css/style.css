@@ -178,7 +178,7 @@ header .container{
 /* main */
 
 main{
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .scheda{
     border-radius: 20px; 
@@ -190,18 +190,16 @@ main{
         .row{
     
             display: flex;
-            /* flex-wrap: wrap; */
+            flex-wrap: wrap;
             justify-content: space-between;
-            /* align-items: stretch; */
-            /* gap: 20px; */
-        }
-        .col{
-            flex-basis: calc(100%/3 - 10px);
-            padding-bottom: 20px;
 
         }
+
+
         .scheda{
-            height: 100%;
+           
+            flex-basis: calc(100%/3 - 15px);
+            
         }
 
     }
@@ -216,7 +214,7 @@ main{
 
 #developer-section .scheda{
     background-color: rgb(175, 222, 253);
-    padding: 25px 25px 0 25px;
+    padding: 25px 40px 0 40px;
 }
 
 #developer-section h4{
@@ -225,18 +223,25 @@ main{
 }
 #developer-section p{
     line-height: 180%;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-#developer-section button.blue{
+#developer-section button.blue {
     width: 80%;
-    text-align: center;
-    padding: 10px 0;
     font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 25px;
     font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 0;
+   
 }
+
+#developer-section button.blue i{
+    color: white;
+    font-size: 15px;
+}
+
 #developer-section .scheda div img{
     max-width: 100%;
     margin-bottom: -5px;
@@ -246,9 +251,9 @@ main{
     text-align: center;
     padding: 30px 20px;
 }
-#developer-section .scheda.slim i{
+
+#developer-section .scheda i{
     font-size: 80px;
-    margin-bottom: 20px;
     color: rgb(0, 126, 247);
 }
 
@@ -260,23 +265,20 @@ main{
     /* versione tablet */
 
     @media screen and (min-width:768px) {
-        #developer-section .col.big{
-            flex-basis: calc(100%/3*2 - 5px);
+        #developer-section .row .scheda:first-child {
+            flex-basis: calc(100%/3*2 - 7.5px);
         }
         #developer-section .scheda div.img-scheda{
             max-width: 60%;
         }
 
-        #developer-section .scheda div img{
-        
-            margin-bottom: -25px;
-        }
+
         #developer-section button.blue{
             width: 60%;
             letter-spacing: 0;
         }
 
-        #developer-section .scheda.slim{
+        #developer-section .scheda{
             padding-bottom: 0px;
         }
 
@@ -295,7 +297,7 @@ main{
             max-width: 60%;
         } 
 
-        #developer-section .scheda.big{
+        #developer-section .row .scheda:first-child{
             display: flex;
             align-items: end;
         }       
@@ -567,37 +569,26 @@ div.foto.circle img{
 
     /* versione tablet */
 
-    @media screen and (min-width:768px) {
-
-
-        #benefits .row{
-    
-            flex-wrap: wrap;
-
-        }
+    @media screen and (min-width:768px) and (max-width:1024px){
 
 
         #benefits .scheda{
             flex-basis: calc(100%/2 - 10px);
         }
 
-    }
-
-    @media screen and (min-width:1024px){
-
-
-        #benefits .row{
-    
-            flex-wrap: wrap;
-
-        }
-
-
-        #benefits .scheda{
-            flex-basis: calc(100%/3 - 10px);
-        }
 
     }
+
+        @media screen and (min-width:768px){
+
+
+        #benefits h2{
+            font-size: 75px;
+        } 
+
+    }
+
+
 
 
 /* about us */
