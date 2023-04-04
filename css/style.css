@@ -19,6 +19,19 @@ a{
     color: white;
 }
 
+h2{
+    font-size: 45px;
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+h4{
+    font-size: 25px;
+}
+
 .container{
     width: 90%;
     max-width: 480px;
@@ -39,6 +52,14 @@ button.white{
 
 button.white:hover{
     background-color: rgb(175, 222, 253);
+}
+
+button.violet{
+    background-color: rgb(153, 146, 224);
+}
+
+button.violet:hover{
+    background-color: rgb(100, 134, 248);
 }
 
 button.white a{
@@ -195,7 +216,6 @@ main{
 
 #developer-section h4{
     color: rgb(0, 126, 247);
-    font-size: 25px;
     margin-bottom: 15px;
 }
 #developer-section p{
@@ -300,10 +320,6 @@ main{
     margin-bottom: 60px;
 }
 
-.sx-planning h3{
-    font-size: 40px;
-    margin-bottom: 40px;
-}
 
 .sx-planning p{
     line-height: 180%;
@@ -321,7 +337,6 @@ main{
     margin-bottom: 20px;
 }
 .dx-planning h4{
-    font-size: 25px;
     margin-bottom: 20px;
 }
 
@@ -382,7 +397,7 @@ main{
 /* testimonials */
 
 #testimonial-section{
-    margin: 40px 0;
+    margin: 40px 0 80px 0;
 }
 
 #testimonial-section .container{
@@ -423,13 +438,17 @@ main{
     text-align: center;
 }
 
-.item .foto{
+div.foto.circle{
     height: 200px;
     width: 200px;
-    margin: 10px auto 20px auto;
-
 }
-.item .foto img{
+
+#testimonial-section div.foto.circle{
+
+    margin: 10px auto 20px auto;
+}
+
+div.foto.circle img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -476,10 +495,6 @@ main{
             gap: 25px;
             
         }
-        .item .foto{
-            flex-basis: 200px;
-            height: 200px;
-        }
 
         .item .description{
             flex-basis: 70%;
@@ -489,17 +504,12 @@ main{
     } 
 
 
-
-
-
-
     /* versione desktop */
 
     @media screen and (min-width:1024px) {
 
         #testimonial-section .item{
-            display: flex;
-            align-items: center;
+ 
             gap: 20px;
             padding: 10px 20px 20px 5px;
         }
@@ -516,16 +526,72 @@ main{
     padding: 40px 0;
 }
 
+#benefits h3{
+    text-align: center;
+}
+
 #benefits .scheda{
     background-color: white;
+    padding: 50px 30px 40px 30px;
 }
+
+#benefits .scheda h2, #benefits .scheda h4{
+    color: rgb(153, 146, 224);
+}
+
+#benefits .scheda h2{
+    margin-bottom: 25px;
+}
+#benefits .scheda h4{
+    margin-bottom: 25px;
+}
+#benefits .scheda p{
+    color: grey;
+    margin-bottom: 25px;
+}
+
+#benefits .scheda button.violet{
+    padding: 10px 0;
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+
+
 
     /* versione tablet */
 
-    @media screen and (min-width:768px) and (max-width:1024px){
+    @media screen and (min-width:768px) {
 
-        .scheda{
+
+        #benefits .row{
+    
+            flex-wrap: wrap;
+
+        }
+
+
+        #benefits .scheda{
             flex-basis: calc(100%/2 - 10px);
+        }
+
+    }
+
+    @media screen and (min-width:1024px){
+
+
+        #benefits .row{
+    
+            flex-wrap: wrap;
+
+        }
+
+
+        #benefits .scheda{
+            flex-basis: calc(100%/3 - 10px);
         }
 
     }
@@ -534,20 +600,54 @@ main{
 /* about us */
 
 #aboutus{
-    padding: 20px 0;
+    padding: 80px 0;
 }
+
+#aboutus h3{
+    color: rgb(153, 146, 224);
+}
+
+#aboutus p{
+    line-height: 200%;
+    margin-bottom: 40px;
+}
+#aboutus .foto{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.foto .virgolette{
+    line-height: 0;
+    position: absolute;
+    top: 100px;
+    right: -20px;
+    font-size: 240px;
+    color: rgb(153, 146, 224);
+}
+
+#aboutus h4{
+    color: rgb(153, 146, 224);
+    margin-bottom: 30px;
+}
+
+#aboutus button{
+    padding: 10px 20px;
+}
+
+
     /* versione tablet */
 
     @media screen and (min-width:768px) {
         #aboutus .container{
             display: flex;
+            justify-content: space-between;
         }
 
         #aboutus .area-txt{
-            flex-basis: 70%;
+            flex-basis: 60%;
         }
         #aboutus .area-foto{
-            flex-basis: 30%;
+            flex-basis: 20%;
         }
 
     
@@ -560,13 +660,6 @@ main{
             padding: 10px;
         }
 
-        #aboutus .area-txt{
-            flex-basis: calc(100%/3*2);
-        }
-        #aboutus .area-foto{
-            flex-basis: calc(100%/3);
-        }
-
     }  
 
 
@@ -576,74 +669,4 @@ footer{
 
 }
 
-
-/* debug
-
-section{
-    min-height: 150px;
-    background-color: brown;
-    margin: 5px 0;
-}
-
-footer{
-    min-height: 150px;
-}
-
-.container{
-    min-height: 50px;
-    background-color: aqua;
-}
-
-
-#logo, header nav{
-    min-height: 50px;
-    min-width: 100px;
-    background-color: blueviolet;
-    border: 1px solid black;
-}
-
-.scheda{
-    min-height: 100px;
-    border: 1px solid black;
-
-}
-
-.sx-planning, .dx-planning{
-    min-height: 50px;
-    min-width: 100px;
-    background-color: blueviolet;
-    border: 1px solid black;
-}
-
-.sx-planning{
-    min-height: 80px;
-}
-
-.testimonial-text{
-    min-height: 200px;
-    min-width: 100px;
-    background-color: aquamarine;
-    border: 1px solid black;
-}
-
-.item{
-    min-height: 50px;
-    min-width: 100px;
-    border: 1px solid black;
-}
-
-
-.foto{
-    min-height: 20px;
-    min-width: 20px;
-    background-color: pink;
-}
-
-.description{
-    min-height: 40px;
-    min-width: 40px;
-    background-color: lightgreen;
-}
-
- */
 
