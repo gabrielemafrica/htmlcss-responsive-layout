@@ -183,6 +183,23 @@ main{
 .scheda{
     border-radius: 20px; 
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/* effetti */
+.scheda:hover{
+    position: relative;
+    top: -3px;
+    left: -3px;
+    box-shadow: 10px 10px 5px #0000002d;
+}
+
+.scheda:active{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    box-shadow: none;
 }
 
     /* versione tablet */
@@ -237,11 +254,6 @@ main{
    
 }
 
-#developer-section button.blue i{
-    color: white;
-    font-size: 15px;
-}
-
 #developer-section .scheda div img{
     max-width: 100%;
     margin-bottom: -5px;
@@ -252,14 +264,19 @@ main{
     padding: 30px 20px;
 }
 
-#developer-section .scheda i{
+#developer-section .scheda > i{
     font-size: 80px;
+    margin-bottom: 20px;
     color: rgb(0, 126, 247);
 }
+/* effetti */
+#developer-section .scheda:hover > i, #developer-section .scheda:hover h4{
+    color: rgb(195, 249, 138);
+}
 
-
-
-
+#developer-section .scheda:active > i, #developer-section .scheda:active h4{
+    color: rgb(0, 126, 247);
+}
 
 
     /* versione tablet */
@@ -287,10 +304,6 @@ main{
 
     @media screen and (min-width:1024px) {
 
-        #developer-section .scheda div img{
-        
-            margin-bottom: -5px;
-        }
 
         #developer-section .txt-scheda{
             height: 100%;
@@ -339,6 +352,7 @@ main{
     background-color: white;
     padding: 40px 30px;
     text-align: center;
+    cursor: pointer;
 }
 .dx-planning .img-planning{
     margin-bottom: 20px;
@@ -365,6 +379,45 @@ main{
 .dx-planning .circle:hover{
     background-color: rgb(100, 134, 248);
     color: white;
+    position: relative;
+    animation: muovi 1s linear infinite;
+}
+
+.dx-planning .circle:active{
+    animation: trema 0.2s linear infinite;
+}
+
+@keyframes muovi{
+    0%{
+        top:0px;
+    }
+
+    50%{
+        top: 20px;
+    }
+    100%{
+        top:0px;
+    }
+}
+
+@keyframes trema{
+    0%{
+        left:0px;
+    }
+    25%{
+        left: 5px;
+    }
+    50%{
+        left: 0px;
+    }
+
+    75%{
+        left:-5px;
+    }
+    100%{
+        left:0px;
+    }
+
 }
 
 .dx-planning i{
@@ -372,6 +425,31 @@ main{
     vertical-align: middle;
 }
 
+/* animazioni */
+#planning-section .dx-planning:hover{
+    animation: changecolor 2s linear infinite;
+}
+#planning-section .dx-planning:active{
+    animation: changecolor 0.2s linear infinite;
+}
+
+@keyframes changecolor{
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: rgb(245, 0, 233);
+    }
+    75%{
+        background-color:orange;
+    }
+    90%{
+        background-color: rgb(98, 255, 0);
+    }
+}
 
 
 
@@ -564,8 +642,12 @@ div.foto.circle img{
     font-weight: bold;
 }
 
-
-
+#benefits .scheda:hover h2, #benefits .scheda:hover h4{
+    color: rgb(98, 255, 0);
+}
+#benefits .scheda:active h2, #benefits .scheda:active h4{
+    color: rgb(153, 146, 224);
+}
 
     /* versione tablet */
 
@@ -687,6 +769,14 @@ div.foto.circle img{
     margin-bottom: 30px;
     color: rgb(255, 191, 107);
 }
+
+/* animazioni */
+#getstarted h2{
+    position: relative;
+    animation: trema 0.2s linear infinite, muovi 0.2s linear infinite;
+}
+
+
 
 #getstarted p{
     line-height: 180%;
